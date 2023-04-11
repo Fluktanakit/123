@@ -29,7 +29,7 @@ if (isset($_REQUEST['btn_insert'])) {
       $errorMsg = "Upload PDF";
   }
 if(isset($errorMsg)){
-  $insert_stmt = $db->prepare('INSERT INTO upload(name,year,doc_name,doc_file) VALUES (:fname,:fyear,:fdoc_name,:fdoc_file)');
+  $insert_stmt = $conn->prepare('INSERT INTO upload(name,year,doc_name,doc_file) VALUES (:fname,:fyear,:fdoc_name,:fdoc_file)');
   $insert_stmt->bindparam(':fname',$name);
   $insert_stmt->bindparam(':fyear',$year);
   $insert_stmt->bindparam(':fdoc_name',$doc_name);

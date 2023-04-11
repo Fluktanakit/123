@@ -16,10 +16,11 @@
                         <thead>
                             <tr>
                                 <th width="5%">ลำดับ</th>
-                                <th width="40%">ชื่อ</th>
-                                <th width="45%">นามสกุล</th>
-                                <th width="5%">แก้ไข</th>
-                                <th width="5%">ลบ</th>
+                                <th width="30%">ชื่อ-นามสกุล</th>
+                                <th width="10%">ชั้นปี</th>
+                                <th width="30%">ชื่อเอกสาร</th>
+                                <th width="10%">แก้ไข</th>
+                                <th width="10%">ลบ</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -34,7 +35,8 @@
                             <tr>
                                 <td><?= $k['id'];?></td>
                                 <td><?= $k['name'];?></td>
-                                <td><?= $k['surname'];?></td>
+                                <td><?= $k['year'];?></td>
+                                <td><?= $k['doc_name'];?></td>
                                 <td><a href="formEdit.php?id=<?= $k['id'];?>" class="btn btn-warning btn-sm">แก้ไข</a></td>
                                 <td><a href="del.php?id=<?= $k['id'];?>" class="btn btn-danger btn-sm" onclick="return confirm('ยืนยันการลบข้อมูล !!');">ลบ</a></td>
                             </tr>
