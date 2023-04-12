@@ -3,7 +3,7 @@ if(isset($_GET['id'])){
 require_once 'connect.php';
 //ประกาศตัวแปรรับค่าจาก param method get
 $id = $_GET['id'];
-$stmt = $conn->prepare('DELETE FROM tbl_member WHERE id=:id');
+$stmt = $conn->prepare('DELETE FROM 123 WHERE id=:id');
 $stmt->bindParam(':id', $id , PDO::PARAM_INT);
 $stmt->execute();
 
